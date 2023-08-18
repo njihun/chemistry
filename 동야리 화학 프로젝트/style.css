@@ -1,0 +1,151 @@
+body {
+  user-select: none;
+  background-color: darkgray;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.group {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 30px;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+
+.group div:first-child {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+}
+
+.group div div:first-child {
+  user-select: text;
+  width: 100%;
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.group div .sticky-top {
+  height: 10vh;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  user-select: none;
+}
+
+.group div .sticky-top div:first-child{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(251, 64, 126);
+  font-size: 32px;
+  user-select: none;
+  overflow: hidden;
+}
+
+.group div div:first-child p {
+  clear: both;
+  /* 뒤에 오는 요소들이 p 태그 주위를 둘러싸지 않도록 설정 */
+  margin: 10px 0;
+  /* 위 아래 여백을 추가해서 정렬을 조정 */
+  padding: 20px;
+  border: 1px solid black;
+  max-width: 30vw;
+  font-size: 18px;
+}
+
+.group div div:first-child #me {
+  float: right;
+  /* p 태그를 오른쪽으로 이동시킴 */
+  background-color: white;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.group div div:first-child #you {
+  float: left;
+  /* p 태그를 오른쪽으로 이동시킴 */
+  background-color: dodgerblue;
+  color: white;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.group div div:first-child::-webkit-scrollbar {
+  width: 10px;
+}
+
+.group div div:first-child::-webkit-scrollbar-track {
+  background-color: transparent;
+  /* 스크롤바 배경 투명색 */
+}
+
+.group div div:first-child::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* 스크롤바 색상 */
+  border-radius: 10px;
+  /* 스크롤바 모서리 둥글게 */
+}
+
+.group div div:first-child::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* 스크롤바 호버 시 색상 */
+}
+
+.group .sticky-bottom {
+  width: 85%;
+  height: 30px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #666;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.group .sticky-bottom button {
+  width: 100px;
+  height: 60px;
+  background-color: dodgerblue;
+  border: 0;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.group .sticky-bottom textarea {
+  flex: auto;
+  height: 28px;
+  background-color: #666;
+  color: aliceblue;
+  font-size: 28px;
+  resize: none;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.group .sticky-bottom textarea::placeholder {
+  color: darkgray;
+  font-size: 28px;
+}
