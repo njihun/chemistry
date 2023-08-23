@@ -24,9 +24,25 @@ function main(msg) {
   document.querySelector(".group div div:first-child").innerHTML += "<p id='you'>"+output+"</p>";
   document.querySelector(".group div div:first-child").scrollTop = document.querySelector(".group div div:first-child").scrollHeight;
 }
+
+window.onload = function() {
+  input_Select();
+};
+
+document.querySelector('.group .sticky-bottom').addEventListener("click", function() {
+  input_Select();
+});
+
+function input_Select() {
+  document.querySelector('.group .sticky-bottom textarea').focus();
+
+}
+
 /*
 document.querySelector('.group .sticky-bottom textarea').addEventListener('keydown', (event) => {
   if (event.key === 'Enter') {
+    if (!event.shiftKey) {
+    
     main(document.querySelector('.group .sticky-bottom textarea').value); 
   }
 });
