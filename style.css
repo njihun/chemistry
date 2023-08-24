@@ -66,16 +66,10 @@ body {
   /* 위 아래 여백을 추가해서 정렬을 조정 */
   padding: 20px;
   border: 1px solid black;
-  max-width: 50vw;
+  max-width: 30vw;
   font-size: 18px;
 }
 
-
-.group div div:first-child p div:first-child {
-  background-color: black;
-  font-size: 30px;
-  
-}
 
 .group div div:first-child #me {
   float: right;
@@ -161,4 +155,35 @@ body {
 .group .sticky-bottom textarea::placeholder {
   color: darkgray;
   font-size: 28px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  .group div div:first-child p {
+    max-width: 50vw;
+    font-size: 15px;
+  }
+  .group .sticky-bottom {
+    height: 20px;
+    
+    border: 2px solid darkgray;
+  }
+  .group .sticky-bottom textarea {
+    height: 19px;
+    font-size: 19px;
+  }
+  .group .sticky-bottom button {
+    width: 80px;
+    height: 50px;
+  }
+  .group .sticky-bottom textarea::placeholder {
+    font-size: 19px;
+  }
+  .group .sticky-bottom:focus-within {
+    border: 2px solid dodgerblue;
+  }
+
+  
+
+
 }
